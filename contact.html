@@ -1,26 +1,3 @@
-About
-Types
-Recipe
-Contact
-
-
-
-My favorite place to get pizza by the slice is at Sal's Pizzeria in Mamaroneck, New York. It has been in business for over 50 years and continues to be a local favorite. The must-haves include the plain slice, salad slice, and the sicilian slice. I have friends who were born and raised in New York City who rave about the slices from Sal's. Yes, it really is that good. Go ahead and try it for yourself and let me know what you think! Do you have a favorite pizzeria? Tell me about it below! 
-
-ADDRESS:
-316 Mamaroneck Ave
-Mamaroneck, NY 10543
-
-
-STORE HOURS:
-Sunday - Thursday: 11am-Midnight
-Friday & Saturday: 11am-1am
-
-
-salsmamaroneck.com
-914-381-2022
-
-
 <!-- textarea  -->
 <!-- need to include a text field  -->
 <!-- images field? i want people to be able to submit images  -->
@@ -29,38 +6,65 @@ salsmamaroneck.com
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sample Contact Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Contact</title>
+  </head>
+  <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <!-- <div class="container"> -->
+    <div class="nav">
+      <nav>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="types.html">Types</a></li>
+          <li><a href="recipe.html">Recipe</a></li>
+          <li><a href="contact.html" class = "current">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <header id="main">
+        <h1>
+            Contact us
+        </h1>
+    </header>
+    <div class = "gallery"> 
+        <div class = "sals text-block"> 
+            <a name="sals"></a>
+    <p>My favorite place to get pizza by the slice is at Sal's Pizzeria in Mamaroneck, New York. It has been in business for over 50 years and continues to be a local favorite. The must-haves include the plain slice, salad slice, and the sicilian slice. I have friends who were born and raised in New York City who rave about the slices from Sal's. Yes, it really is that good. Go ahead and try it for yourself and let me know what you think! Do you have a favorite pizzeria? Tell me about it below! </p>
+    <p>
+        ADDRESS:
+            316 Mamaroneck Ave
+            Mamaroneck, NY 10543
+            
+            
+            STORE HOURS:
+            Sunday - Thursday: 11am-Midnight
+            Friday & Saturday: 11am-1am
+            
+            
+            salsmamaroneck.com
+            914-381-2022 </p>
+        </div>
+    </header>
+    <div class="contact-image">
+      <img src="images/salspizzeriastorefrontstreetview.jpg" alt="salsstorefrontview"/>
+      <!-- <img src="images/saladandplainslicesalspizzeria.jpg" alt="salssaladandplainslice"/>
+      <img src="images/sicilianslicesalspizzeria.jpg" alt="salssicilianslice"/> -->
+    
+    </div>
+
     <!-- BOOTSTRAP CDNs -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
     <!-- FONT AWESOME -->
-    <style>
-        .header {
-            color: red;
-            font-size: 27px;
-            padding: 10px;
-        }
-
-        .bigicon {
-            font-size: 35px;
-            color: #36A0FF;
-            padding-left:2%;
-        }
-        form div{
-            display:inline-block;
-            width: 90%;
-        }
-        button.btn{             /*Why couldn't I just use button?*/
-            display: block;
-            margin: 0 auto;
-        }
-
-</style>
+</div>
 </head>
 <body>
   
 <!-- http://www.prepbootstrap.com/bootstrap-template/contact-form -->
 <main>
-    <h1>Contact us</h1>
 <form class="form-horizontal" method="post">
     <fieldset>
         <legend class="text-center header"> Do you have a favorite pizzeria? Share your thoughts with me below! </legend>
@@ -68,20 +72,21 @@ salsmamaroneck.com
         <div class="form-group">
             <span><i class="fa fa-user bigicon"></i></span>
             <div>
-                <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+                <input id="fname" name="name" type="text" placeholder="First Name" aria-label="First Name" class="form-control">
             </div>
         </div>
         <div class="form-group">
             <span><i class="fa fa-user bigicon"></i></span>
             <div>
-                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                <input id="lname" name="name" type="text" placeholder="Last Name" aria-label="Last Name"class="form-control">
             </div>
         </div>
 
         <div class="form-group">
             <span><i class="fa fa-paper-plane bigicon"></i></span>
             <div>
-                <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                <input id="email" name="email" type="text" placeholder="Email Address" 
+                aria-label="Email Address" class="form-control">
             </div>
         </div>
 
@@ -95,7 +100,7 @@ salsmamaroneck.com
         <div class="form-group">
             <span><i class = "fas fa-pencil-alt bigicon"></i></span>
             <div>
-                <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days."></textarea>
+                <textarea class="form-control" id="message" name="message" placeholder="Tell us about your favorite pizzeria here. We will get back to you shortly!"></textarea>
             </div>
         </div>
 
@@ -106,6 +111,13 @@ salsmamaroneck.com
         </div>
     </fieldset>
 </form>
+
+</div>
+<footer>
+    <p>University of Michigan School of Information <br/>
+      &copy; Kira Mintzer, Web Design 2019-2020</p>
+</footer>
+</div>
 </main>
 </body>
             
