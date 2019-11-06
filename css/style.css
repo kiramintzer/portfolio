@@ -48,26 +48,6 @@ h2{
   color: white;
 }
 
-/* nav ul{
-  list-style-type: none;
-}
-
-nav li{
-
-  padding-right: 20px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-nav a{
-  color: black;
-  font-weight: bold;
-  text-decoration: none; 
-} */
-
-
-/*Your code here*/
-/*Add the selector and code to put a 2px black border around all elements in focus.*/
 
 nav a:focus{
   border: 2px solid black;
@@ -205,8 +185,7 @@ nav ul{
     transform: rotateY(180deg);
   }
 
-  /* Help: https://adrianroselli.com/2016/02/keyboard-and-overflow.html */
-  /* axe threw me and error and then i added tabindex = "0" to the flip-card-back to make it also flip back when you hit tab and then it went away. now I have no errors but should it be scrollable via the keyboard mousekeys? right now to scroll u can only use mouse but wave does not detect it */
+  /* scroll */
   .flip-card-back{
     overflow:auto;
 }
@@ -223,29 +202,66 @@ nav ul{
   }
 
 .contact-image img{
-  opacity: .7;
+  opacity: 1.0;
   width:400px;
  
 }
 .contact-image img:hover{
-  opacity: 1.0;
+  opacity: .7;
 }
 
 /* .contact-image{
   grid-template-columns: 1fr;
 } */
 
+.form-horizontal{
+  /* margin: 0 auto; */
+  align-content: center;
+  
+}
+
+.text-center{
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+/* .form-group{
+  margin: 0 auto;
+} */
+
+
 input{
-  width: 80%;
+  width: 50%;
   padding:2%;
+  font-family: 'Lora';
+  text-align: center;
+  color: black;
+  width:300px;
+  border-radius: .5em;
+  display: block;
+  margin: 0 auto;
 }
 
 textarea {
-	width: 600px;
+	width: 300px;
 	height: 120px;
 	border: 3px solid #cccccc;
-	padding: 5px;
-	font-family: Tahoma, sans-serif;
+  padding: 5px;
+  text-align: center;
+  font-family: Tahoma, sans-serif;
+  border-radius: .5em;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border-style: solid;
+  border-width: .25em; 
+}
+
+button.btn{            
+  display: block;
+  margin: 20px auto;
+  padding: 1%;
 }
 
 /* contact form */
@@ -254,32 +270,25 @@ textarea {
   color: red;
   font-size: 27px;
   padding: 10px;
-}
-.bigicon {
+} */
+/* .bigicon {
   font-size: 35px;
   color: #36A0FF;
   padding-left:2%;
-}
+} */
 form div{
   display:inline-block;
   width: 90%;
 }
-button.btn{            
+/* button.btn{            
   display: block;
   margin: 0 auto;
-}
-input{
+} */
+/* input{
   width: 80%;
   padding:2%;
-}
-textarea {
-width: 600px;
-height: 120px;
-border: 3px solid #cccccc;
-padding: 5px;
-font-family: Tahoma, sans-serif;
-}
- */
+} */
+
 
   @media all and (min-width: 600px){
     nav ul{
@@ -306,6 +315,13 @@ font-family: Tahoma, sans-serif;
   .about-image{
     height: 450px;              
   }
+  /* input{
+    width: 40%;
+  } */
+  textarea {
+    width: 400px;
+  }
+
 }
 
 @media all and (min-width: 1100px){
@@ -331,25 +347,24 @@ font-family: Tahoma, sans-serif;
   }
 
   .sals{
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 2;
   }
 
-
-  
-
+  /* .sals2{
+  grid-column: 2/span 1;
+  } */
+  /* input{
+    width: 40%;
+  } */
   textarea {
-    width: 1070px;
-    height: 120px;
-    border: 3px solid #cccccc;
-    padding: 5px;
-    font-family: Tahoma, sans-serif;
+    width: 400px;
   }
 
 }
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
-      scroll-behavior: initial; /* Removes scroll animation */
+      scroll-behavior: auto; /* Removes scroll animation */
   }
 
   .skip a{
@@ -358,8 +373,8 @@ font-family: Tahoma, sans-serif;
     padding: 6px;
     position: absolute;
     top: -40px;
-    -webkit-transition: top 1s ease-out;
-    transition: top 1s ease-out;
+    -webkit-transition: none !important;
+    transition: top 1s ease-out !important;
     z-index: 1;
   }
 
