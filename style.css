@@ -1,0 +1,408 @@
+ @keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.current{
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+body{
+  background-color:#e9c590;
+  font-size: 18px;
+  /* margin: 2%; */
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  /* padding: 50px 0; */
+  text-align: center;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  padding: 80px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  color:#9c2913;
+  /* background-color: #d5d5d5; */
+  letter-spacing: .05em;
+  text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
+  animation-name: tracking-in-expand;
+  animation-duration: 1.4s;  
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+#main h2{
+  color: #9c2913;
+}
+
+.nav{
+  background-color: #9c2913;
+}
+
+.nav a{
+  color: white;
+}
+
+
+nav a:focus{
+  border: 2px solid black;
+}
+
+/* add sometjing  */
+nav a:hover{
+  text-decoration: underline;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute; /*relative to the parent means absolute */
+  top: -40px; 
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+*:focus{
+  border: 2px solid black; 
+}
+/* make it all bold  */
+/*Your code here*/
+/*Add the selector and rule to move the skip link to the exact top.*/
+
+.skip a:focus {
+  top: 0px; 
+  /* add or fix the rule when its focused; the other rules remain same */
+}
+
+
+footer{
+  background-color:#9c2913;
+  color: white;
+  grid-column: 1 / -1;  /*Can you explain what this does?*/
+  grid-row: 7 / auto;   /*Can you rewrite it?*/
+  padding-top: 30px;
+  text-align: center;
+}
+
+
+nav ul{
+    list-style:none;  
+}
+
+nav ul li{
+    padding: 2%;
+    display: inline;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+
+/* .ingredients, .directions, .recipe-image{
+    border: 2px solid black;
+    padding: 2%;
+} */
+
+/* mobile media query */
+
+  .gallery{
+      display:grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      padding-bottom: 6%;
+      margin: 2%;
+  }
+
+  .gallery img{
+      width: 100%;
+  }
+
+  .recipe-image{
+    grid-column: 1 / -1;
+  }
+
+  .directions{
+      grid-column:1 / -1;
+  }
+
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    
+  }
+  .flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+    
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #9c2913;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  /* scroll */
+  .flip-card-back{
+    overflow:auto;
+}
+
+  .about-image{
+    background-attachment: fixed; /* Parallax effect */
+    background-image: url("../images/pizzapiehomepagetwo.jpg");      
+    /* Your code here - Link to header.jpg in the images folder */
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    height: 400px;                /* Parallax effect */
+  }
+
+.contact-image img{
+  opacity: 1.0;
+  width:400px;
+  padding: 20px;
+ 
+}
+.contact-image img:hover{
+  opacity: .7;
+}
+
+/* .contact-image{
+  grid-template-columns: 1fr;
+} */
+
+.form-horizontal{
+  /* margin: 0 auto; */
+  align-content: center;
+  
+}
+
+.text-center{
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* .form-group{
+  margin: 0 auto;
+} */
+
+
+input{
+  width: 50%;
+  padding:2%;
+  font-family: 'Lora';
+  text-align: center;
+  color: black;
+  width:300px;
+  border-radius: .5em;
+  display: block;
+  margin: 0 auto;
+  border-color: #9c2913;
+}
+
+textarea {
+	width: 300px;
+	height: 120px;
+	border: 3px solid #cccccc;
+  padding: 5px;
+  text-align: center;
+  font-family: Tahoma, sans-serif;
+  border-radius: .5em;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border-style: solid;
+  border-width: .25em; 
+  border-color: #9c2913;
+}
+
+button.btn{            
+  display: block;
+  margin: 20px auto;
+  padding: 1%;
+  background-attachment: white;
+}
+
+/* contact form */
+  
+/* .header {
+  color: red;
+  font-size: 27px;
+  padding: 10px;
+} */
+/* .bigicon {
+  font-size: 35px;
+  color: #36A0FF;
+  padding-left:2%;
+} */
+form div{
+  display:inline-block;
+  width: 90%;
+}
+/* button.btn{            
+  display: block;
+  margin: 0 auto;
+} */
+/* input{
+  width: 80%;
+  padding:2%;
+} */
+
+
+  @media all and (min-width: 600px){
+    nav ul{
+        flex-direction: row;
+        justify-content:space-between;
+    }
+
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ingredients{
+        grid-column: 1/-1;
+    }
+
+    .directions{
+        grid-column: 1 / span 1;
+    }
+
+    .recipe-image{
+        grid-column: 2 / span 1;
+    }
+
+  .about-image{
+    height: 450px;              
+  }
+  /* input{
+    width: 40%;
+  } */
+  textarea {
+    width: 400px;
+  }
+
+}
+
+@media all and (min-width: 1100px){
+    nav ul{
+        justify-content:flex-end;
+    }
+
+    .gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-bottom: 2
+    }
+
+    .directions{
+        grid-column: 1 / span 2;
+    }
+
+    .recipe-image{
+        grid-column: 3 / span 1;
+    }
+
+  .about-image{
+    height: 550px;                /* Parallax effect */
+  }
+
+  .sals{
+    grid-column: 1 / span 2;
+  }
+
+  /* .sals2{
+  grid-column: 2/span 1;
+  } */
+  /* input{
+    width: 40%;
+  } */
+  textarea {
+    width: 400px;
+  }
+
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important;
+    transition: top 1s ease-out !important;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+
+  h1{
+    animation-duration: 0s;
+    transition-duration: 0s;
+}
+
+  .contact-image img:hover{
+    opacity: 1.0;
+  }
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-11-4 10:24:0
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
