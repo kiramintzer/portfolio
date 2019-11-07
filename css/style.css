@@ -31,13 +31,16 @@ h1{
   letter-spacing: .05em;
   text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
   animation-name: tracking-in-expand;
-  animation-duration: 1.4s;
+  animation-duration: 1.4s;  
 }
-
 
 h2{
   font-size: 32px;
   line-height: 1.5;
+}
+
+#main h2{
+  color: #9c2913;
 }
 
 .nav{
@@ -204,6 +207,7 @@ nav ul{
 .contact-image img{
   opacity: 1.0;
   width:400px;
+  padding: 20px;
  
 }
 .contact-image img:hover{
@@ -222,7 +226,7 @@ nav ul{
 
 .text-center{
   margin: 0 auto;
-  padding: 40px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -241,6 +245,7 @@ input{
   border-radius: .5em;
   display: block;
   margin: 0 auto;
+  border-color: #9c2913;
 }
 
 textarea {
@@ -256,12 +261,14 @@ textarea {
   padding: 10px;
   border-style: solid;
   border-width: .25em; 
+  border-color: #9c2913;
 }
 
 button.btn{            
   display: block;
   margin: 20px auto;
   padding: 1%;
+  background-attachment: white;
 }
 
 /* contact form */
@@ -375,6 +382,8 @@ form div{
     top: -40px;
     -webkit-transition: none !important;
     transition: top 1s ease-out !important;
+    animation-duration: .001s !important;
+    transition-duration: .001s !important;
     z-index: 1;
   }
 
