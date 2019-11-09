@@ -382,13 +382,20 @@ form div{
     top: -40px;
     -webkit-transition: none !important;
     transition: top 1s ease-out !important;
-    animation-duration: .001s !important;
-    transition-duration: .001s !important;
     z-index: 1;
   }
 
   .skip a:focus{
     top:0;
+  }
+
+  h1{
+    animation-duration: 0s;
+    transition-duration: 0s;
+}
+
+  .contact-image img:hover{
+    opacity: 1.0;
   }
 }
 
