@@ -342,7 +342,7 @@ form div{
     position: absolute;
     top: -40px;
     -webkit-transition: none !important;
-    transition: top 1s ease-out !important;
+    transition: top 0s ease-out !important;
     z-index: 1;
   }
 
@@ -359,6 +359,9 @@ form div{
 /* removes hover filter */
   .contact-image img:hover{
     opacity: 1.0;
+  }
+  .flip-card-inner{ 
+  transition: transform 0s;
   }
 }
 
