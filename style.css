@@ -1,4 +1,4 @@
- @keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
 
 html{
     scroll-behavior: smooth;
@@ -12,14 +12,12 @@ html{
 body{
   background-color:#e9c590;
   font-size: 18px;
-  /* margin: 2%; */
   padding: 0;
 }
 
 h1{
   font-size: 50px;
   line-height: 1;
-  /* padding: 50px 0; */
   text-align: center;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
   padding: 80px 50px;
@@ -56,7 +54,6 @@ nav a:focus{
   border: 2px solid black;
 }
 
-/* add sometjing  */
 nav a:hover{
   text-decoration: underline;
 }
@@ -65,7 +62,7 @@ nav a:hover{
   background: white;
   left: 0;
   padding: 6px;
-  position: absolute; /*relative to the parent means absolute */
+  position: absolute; 
   top: -40px; 
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
@@ -75,21 +72,18 @@ nav a:hover{
 *:focus{
   border: 2px solid black; 
 }
-/* make it all bold  */
-/*Your code here*/
-/*Add the selector and rule to move the skip link to the exact top.*/
+
 
 .skip a:focus {
   top: 0px; 
-  /* add or fix the rule when its focused; the other rules remain same */
 }
 
 
 footer{
   background-color:#9c2913;
   color: white;
-  grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 7 / auto;   /*Can you rewrite it?*/
+  grid-column: 1 / -1;  
+  grid-row: 7 / auto; 
   padding-top: 30px;
   text-align: center;
 }
@@ -111,12 +105,6 @@ nav ul{
   
 }
 
-/* .ingredients, .directions, .recipe-image{
-    border: 2px solid black;
-    padding: 2%;
-} */
-
-/* mobile media query */
 
   .gallery{
       display:grid;
@@ -137,6 +125,8 @@ nav ul{
   .directions{
       grid-column:1 / -1;
   }
+
+  /* flip card code from: https://www.w3schools.com/howto/howto_css_flip_card.asp */
 
   /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
@@ -193,33 +183,30 @@ nav ul{
     overflow:auto;
 }
 
+/* parallax effect  */
   .about-image{
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed; 
     background-image: url("../images/pizzapiehomepagetwo.jpg");      
-    /* Your code here - Link to header.jpg in the images folder */
-    background-position: center;  /* Parallax effect */
-    background-repeat: no-repeat; /* Parallax effect */
-    background-size: cover;       /* Parallax effect */
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-size: cover;      
     color: white;
-    height: 400px;                /* Parallax effect */
+    height: 400px;
   }
 
+/* psuedo classes to add filter */
 .contact-image img{
   opacity: 1.0;
   width:400px;
   padding: 20px;
- 
 }
+/* psuedo classes to add filter */
 .contact-image img:hover{
   opacity: .7;
 }
 
-/* .contact-image{
-  grid-template-columns: 1fr;
-} */
 
 .form-horizontal{
-  /* margin: 0 auto; */
   align-content: center;
   
 }
@@ -230,11 +217,8 @@ nav ul{
   text-align: center;
 }
 
-/* .form-group{
-  margin: 0 auto;
-} */
 
-
+/* contact form */
 input{
   width: 50%;
   padding:2%;
@@ -271,32 +255,12 @@ button.btn{
   background-attachment: white;
 }
 
-/* contact form */
-  
-/* .header {
-  color: red;
-  font-size: 27px;
-  padding: 10px;
-} */
-/* .bigicon {
-  font-size: 35px;
-  color: #36A0FF;
-  padding-left:2%;
-} */
 form div{
   display:inline-block;
   width: 90%;
 }
-/* button.btn{            
-  display: block;
-  margin: 0 auto;
-} */
-/* input{
-  width: 80%;
-  padding:2%;
-} */
 
-
+/* tablet media query */
   @media all and (min-width: 600px){
     nav ul{
         flex-direction: row;
@@ -322,14 +286,15 @@ form div{
   .about-image{
     height: 450px;              
   }
-  /* input{
-    width: 40%;
-  } */
+
+
   textarea {
-    width: 400px;
+    width: 310px;
   }
 
 }
+
+/* desktop media query */
 
 @media all and (min-width: 1100px){
     nav ul{
@@ -350,24 +315,20 @@ form div{
     }
 
   .about-image{
-    height: 550px;                /* Parallax effect */
+    height: 550px;             
   }
 
   .sals{
     grid-column: 1 / span 2;
   }
 
-  /* .sals2{
-  grid-column: 2/span 1;
-  } */
-  /* input{
-    width: 40%;
-  } */
   textarea {
-    width: 400px;
+    width: 325px;
   }
 
 }
+
+/* reduced motion media query */
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
@@ -381,7 +342,7 @@ form div{
     position: absolute;
     top: -40px;
     -webkit-transition: none !important;
-    transition: top 1s ease-out !important;
+    transition: top 0s ease-out !important;
     z-index: 1;
   }
 
@@ -389,20 +350,27 @@ form div{
     top:0;
   }
 
+  /* removes animation of h1 */
   h1{
     animation-duration: 0s;
     transition-duration: 0s;
 }
 
+/* removes hover filter */
   .contact-image img:hover{
     opacity: 1.0;
+  }
+  .flip-card-inner{ 
+  transition: transform 0s;
   }
 }
 
 
+/* text/animation credit */
 /* ----------------------------------------------
  * Generated by Animista on 2019-11-4 10:24:0
  * Licensed under FreeBSD License.
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
+
